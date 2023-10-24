@@ -1,0 +1,23 @@
+section{
+    background-color: rgb(175, 255, 188);
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    margin-top: 230px;
+    border-color: green;
+    border: 10px;
+}
+body{
+    text-align: center;
+    font-size: 23px;
+}
+#btn{
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: rgb(18, 236, 116);
+
+}

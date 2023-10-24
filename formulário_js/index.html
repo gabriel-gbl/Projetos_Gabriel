@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="StyleSheet" href="estilo.css">
+        <title> Formulário </title>
+        <script>
+            function pegardados(){
+                var nome = document.dados.nome.value;
+                var sobrenome = document.dados.sobrenome.value;
+                var idade = document.dados.idade.value;
+                //var tam = nome.length;
+                var tam = document.dados.sobrenome.value.length;
+                const ano = 2023;
+                
+                if(tam >= 4){
+                    var resul = ano - idade;
+                    alert("Nome:  " + nome + ", Sobrenome:  " + sobrenome + ", seu ano de nascimento é:  " + resul);
+                }else{
+                    alert("Nome:  " + nome + ", Sobrenome:  " + sobrenome + ", idade:  " + idade);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <section>
+            <form method="POST" name="dados" action="#" onsubmit="pegardados();">
+
+                <label> Nome: </label><br>
+                <input type="text" name="nome" placeholder="Digite seu nome" ><br>
+
+                <label> Sobrenome: </label><br>
+                <input type="text" name="sobrenome" placeholder="Digite seu sobrenome"><br>
+
+                <label> Idade: </label><br>
+                <input type="text" name="idade" placeholder="Digite sua idade"><br>
+
+                <input type="submit" name="exibir" value="Exibir" id="btn"><br>
+            </form>
+        </section>
+    </body>
+</html>
