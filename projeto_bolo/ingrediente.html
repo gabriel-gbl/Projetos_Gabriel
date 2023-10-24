@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Ingredientes </title>
+    <link rel="icon" href="./img/icontit.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="estilo2.css">
+  </head>
+  <body>
+
+    <header>
+
+      <nav>
+
+        <h2 id="txtcab">Projeto Bolo</h2>
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ingrediente.html">Ingredientes</a></li>
+          <li><a href="mododepreparo.html">Modo de Preparo</a></li>
+          <li><a href="sobrenos.html"> Sobre Nós </a></li>
+
+        </ul>
+
+      </nav>
+
+    </header>
+
+    <main class="container">
+
+      <section id="ingredientes">
+        
+        <ol>
+
+          <p id="titi">Ingredientes </p>
+          
+          <li>210g de farinha de trigo</li><br>
+          <li>160g de açúcar</li><br>
+          <li>4 ovos médios</li><br>
+          <li>110ml de óleo</li><br>
+          <li>130ml de leite</li><br>
+          <li>7g de fermento</li><br>
+
+        </ol>
+
+        <img src="./img/bolo.jfif" id="meioin">
+
+        <ol id="ol2">
+
+          <p id="titi"> Informações: </p>
+
+          <li> Rende: 24 fatias </li><br>
+          <li> Ingredientes para 2 kg</li><br>
+          <li> Bolo com Lactose</li><br>
+
+        </ol>
+
+      </section>
+
+      <button id="Enviar"> Prepare de acordo com sua necessidade </button>
+    </main>
+    
+    <script>
+
+      var btn = document.getElementById('Enviar');
+      var p = document.querySelector("ol");
+      var ol2 = document.getElementById("ol2");
+      const farinha = 210;
+      const acucar = 160;
+      const ovos = 4;
+      const oleo = 110;
+      const leite = 130;
+      const fermento = 7; 
+
+      function calcular(){
+        var qntdd = window.prompt('Digite a quantidade de massa: ');
+
+        if(qntdd > 0){
+          var resulfar = farinha * qntdd;
+          var resulacu = acucar * qntdd;
+          var resulovo = ovos * qntdd;
+          var resulole = oleo * qntdd;
+          var resullei = leite * qntdd;
+          var resulfer = fermento * qntdd;
+          var kg = qntdd * 2;
+          var fatias = qntdd * 24;
+          
+          p.innerHTML = '<p id="titi"> Ingredientes para ' + qntdd + 'massas:</p><li>' + resulfar + 'g de farinha de trigo</li><br><li>' + resulacu + 'g de Açúcar</li><br><li>' + resulovo + ' Ovos </li><br><li>' + resulole + 'ml de Óleo</li><br><li>' + resullei + 'ml de Leite</li><br> <li>' + resulfer + 'g de Fermento</li>';
+          ol2.innerHTML = '<p id="titi"> Informações </p><br><li>Rende: '+ fatias +' fatias </li><br> <li>Ingredientes para '+ kg +'kg </li><br> <li>Bolo com Lactose</li>';
+        } else {
+          alert('Digite um número maior que 0 -_-');
+        }
+      }
+
+      btn.addEventListener('click', calcular);
+
+    </script>
+
+    <footer>
+
+      <p>&copy; 2023 Projeto Bolo Interdisciplinar </p>
+
+    </footer>
+
+  </body>
+
+</html>
